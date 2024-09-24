@@ -14,6 +14,7 @@ import yaml
 
 print()
 ignore = st.secrets['ignore']
+comp_ignore = st.secrets['comp_ignore']
 POST = st.secrets['post_url']
 class E_generator():
     def __init__(self, POST):
@@ -50,13 +51,14 @@ class E_generator():
             my name is xyz, I am currently in boston. review the job
             information in {page_data}, and draft me an cold email to be the hiring 
             manger for that job. And donot mention my email and other contact details.
-            Never mention the name {ignore} 
+            Never mention the name {ignore} and {comp_ignore}
         """
         )
         chain_extract = prompt_extract | self.llm
         generatedEmail = chain_extract.invoke(input={'page_data': page_data, 'my_data': my_data, 
                                                     'resume':resume,
-                                                    'ignore': ignore})
+                                                    'ignore': ignore,
+                                                    'comp_ignore': comp_ignore})
 
         return generatedEmail.content
 
