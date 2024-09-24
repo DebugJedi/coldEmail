@@ -1,4 +1,4 @@
-secrets.yaml
+secrets.yml
 # Logs
 logs
 *.log

@@ -24,8 +24,6 @@ class E_generator():
             groq_api_key=st.secrets["groq_api_key"]
         )
     
-        def configure(self):
-            load_dotenv()
 
     def main(self):
         jobpost = extract_jobinfo(self.post)
