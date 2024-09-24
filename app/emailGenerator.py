@@ -61,7 +61,7 @@ class E_generator():
         return generatedEmail.content
 
     def run(self):
-        self.configure()
+       
         job, resume = self.main()
         generated_email = self.email(resume, job)
 
