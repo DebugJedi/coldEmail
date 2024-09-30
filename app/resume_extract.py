@@ -22,10 +22,10 @@ class extract_resume():
                 # resume  = loader.load_and_split()
                 # # print(res.content)
                 pdfreader = PdfReader(file)
-                count = pdfreader.numPages
+                count = len(pdfreader.pages)
                 all_page_text = ""
                 for i in range(count):
-                        page = pdfreader.getPage(i)
+                        page = pdfreader.pages(i)
                         all_page_text +=page.extract_text()
                 
                 return all_page_text
