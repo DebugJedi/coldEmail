@@ -1,6 +1,6 @@
 from langchain_groq import ChatGroq
 import streamlit as st
-from langchain_community.document_loaders import PyPDFLoader
+# from langchain_community.document_loaders import PyPDFLoader
 import yaml
 from PyPDF2 import PdfFileReader
 
