@@ -25,7 +25,7 @@ class extract_resume():
                 count = len(pdfreader.pages)
                 all_page_text = ""
                 for i in range(count):
-                        page = pdfreader.pages(i)
+                        page = pdfreader.pages[i]
                         all_page_text +=page.extract_text()
                 
                 return all_page_text
