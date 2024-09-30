@@ -36,6 +36,6 @@ if submit_button:
 
     email = E_generator(jobPosting)
     generated_email = email.run()
-    st.write(generated_email)
+    st.write("<span class = 'ai generated_email'>{}</span>".format(generated_email), unsafe_allow_html=True)
 
     
