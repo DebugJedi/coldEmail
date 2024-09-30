@@ -72,4 +72,4 @@ tzdata==2024.2
 urllib3==2.2.3
 yarl==1.12.1
 streamlit-shadcn-ui==0.1.18
-pypdf==5.0.0
+PyPDF2
