@@ -2,6 +2,7 @@ from langchain_groq import ChatGroq
 import streamlit as st
 from langchain_community.document_loaders import PyPDFLoader
 import yaml
+from PyPDF2 import PdfFileReader
 
 
 resume_file  = st.secrets['resume']
@@ -17,11 +18,17 @@ class extract_resume():
                 
         def load(self, file):
 
-                loader = PyPDFLoader(file)
-                resume  = loader.load_and_split()
-                # print(res.content)
+                # loader = PyPDFLoader(file)
+                # resume  = loader.load_and_split()
+                # # print(res.content)
+                pdfreader = PdfFileReader(file)
+                count = pdfreader.numPages
+                all_page_text = ""
+                for i in range(count):
+                        page = pdfreader.getPage(i)
+                        all_page_text +=page.extract_text()
                 
-                return resume
+                return all_page_text
         
         
 
