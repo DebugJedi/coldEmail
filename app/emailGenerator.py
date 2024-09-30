@@ -17,7 +17,8 @@ ignore = st.secrets['ignore']
 comp_ignore = st.secrets['comp_ignore']
 POST = st.secrets['post_url']
 class E_generator():
-    def __init__(self, POST):
+    def __init__(self, POST, doc_fuc):
+        self.fuc = doc_fuc
         self.post = POST
         self.llm = ChatGroq(
             model_name= "llama-3.1-70b-versatile",
@@ -31,8 +32,9 @@ class E_generator():
         job_extract = jobpost.jobPosting()
         # mydata = my_data()
         # my_extract = mydata.load_data()
-        resume = extract_resume()
-        resume_extract = resume.load()
+        # resume = extract_resume()
+
+        resume_extract = self.fuc.load()
         
         return job_extract, resume_extract
     

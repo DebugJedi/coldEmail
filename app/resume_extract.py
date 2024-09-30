@@ -14,12 +14,15 @@ class extract_resume():
                         temperature=0,
                         groq_api_key=st.secrets["groq_api_key"]  
                 )
-                self.locat  = file
+                self.file = file
 
         def load(self):
 
-                loader = PyPDFLoader(self.locat)
+                loader = PyPDFLoader(self.file)
                 resume  = loader.load_and_split()
                 # print(res.content)
                 
                 return resume
+        
+        
+
