@@ -18,8 +18,9 @@ if st.button("Upload"):
     
     extractor_func = extract_resume()
     document = extractor_func.load(doc_file)
-    st.write("File uploaded")
+    st.write(document)
     
+
 jobPosting = st.text_input("Enter a job URL:", value = "https://boards.greenhouse.io/benchling/jobs/6270990" )
 
 submit_button = st.button("Submit")
