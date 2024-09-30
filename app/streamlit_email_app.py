@@ -15,9 +15,9 @@ st.write("<span class = 'header email_app'>📧 Email Generator</span>", unsafe_
 doc_file = st.file_uploader("Upload your resume/document",
                             type=["pdf"])
 if st.button("Upload"):
-    st.write(doc_file.read())
-#     extractor_func = extract_resume()
-#     document = extractor_func.load(doc_file)
+    
+    extractor_func = extract_resume()
+    document = extractor_func.load(doc_file.read())
 
 # jobPosting = st.text_input("Enter a job URL:", value = "https://boards.greenhouse.io/benchling/jobs/6270990" )
 
