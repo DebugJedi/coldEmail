@@ -1,4 +1,6 @@
 .stMarkdown {
     background-color: aquamarine;
     color: black;
+    padding: .75rem;
+    border-radius: .5rem;
 }
