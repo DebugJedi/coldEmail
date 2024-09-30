@@ -16,7 +16,7 @@ doc_file = st.file_uploader("Upload your resume/document",
                             type=["pdf"])
 if st.button("Upload"):
     extractor_func = extract_resume(doc_file)
-    document = extractor_func.upload()
+    document = extractor_func.load()
 
 jobPosting = st.text_input("Enter a job URL:", value = "https://boards.greenhouse.io/benchling/jobs/6270990" )
 
