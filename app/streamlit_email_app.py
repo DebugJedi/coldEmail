@@ -4,8 +4,7 @@ from PIL import Image
 import streamlit_shadcn_ui as ui
 
 
-with open("assets/style.css") as f:
-    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+
 img = Image.open('app/resources/photos/Email-Generator.jpg')
 st.image(img)
 
@@ -16,7 +15,8 @@ submit_button = st.button("Submit")
 
 
 if submit_button:
-
+    with open("assets/style.css") as f:
+        st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
     email = E_generator(jobPosting)
     generated_email = email.run()
     st.write("<span class = 'ai generated_email'>{}</span>".format(generated_email), unsafe_allow_html=True)
