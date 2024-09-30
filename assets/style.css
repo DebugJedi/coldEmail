@@ -2,5 +2,7 @@
     background-color: aquamarine;
     color: black;
     padding: .15rem;
+    padding-left: .25rem;
+    padding-right: .25rem;
     border-radius: .5rem;
 }
