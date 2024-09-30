@@ -25,7 +25,7 @@ if st.button("submit"):
     extractor_func = extract_resume()
     st.spinner(text="uploading...")
     document = extractor_func.load(doc_file)
-    st.write(document)
+    # st.write(document)
     
     email = E_generator(jobPosting, document)
     generated_email = email.run()
