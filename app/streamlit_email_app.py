@@ -25,7 +25,7 @@ st.image(img)
 # with col3:
 #     st.write(' ')
 
-st.title("### 📧 Email Generator")
+st.markdown("## 📧 Email Generator")
 jobPosting = st.text_input("Enter a job URL:", value = "https://boards.greenhouse.io/benchling/jobs/6270990" )
 submit_button = st.button("Submit")
 
