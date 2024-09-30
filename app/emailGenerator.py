@@ -33,7 +33,7 @@ class E_generator():
         # mydata = my_data()
         # my_extract = mydata.load_data()
         # resume = extract_resume()
-
+        st.write(self.file)
         resume_extract = self.file
         
         return job_extract, resume_extract

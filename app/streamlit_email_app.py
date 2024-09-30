@@ -18,7 +18,6 @@ if st.button("Upload"):
     
     extractor_func = extract_resume()
     document = extractor_func.load(doc_file)
-    st.write(document)
     
 
 jobPosting = st.text_input("Enter a job URL:", value = "https://boards.greenhouse.io/benchling/jobs/6270990" )
@@ -26,11 +25,8 @@ jobPosting = st.text_input("Enter a job URL:", value = "https://boards.greenhous
 submit_button = st.button("Submit")
 with open("assets/style.css") as f:
         st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
-try:
-    if submit_button:
+if submit_button:
         
-        email = E_generator(jobPosting, document)
-        generated_email = email.run()
-        st.write("<span class = 'ai generated_email'>{}</span>".format(generated_email), unsafe_allow_html=True)
-except:
-    st.write("Please upload a document..")     
+    email = E_generator(jobPosting, document)
+    generated_email = email.run()
+    st.write("<span class = 'ai generated_email'>{}</span>".format(generated_email), unsafe_allow_html=True)
