@@ -8,17 +8,16 @@ resume_file  = st.secrets['resume']
 
 class extract_resume():
         # https://boards.greenhouse.io/benchling/jobs/6270990
-        def __init__(self, file = resume_file):
+        def __init__(self):
                 self.llm = ChatGroq(
                         model_name= "llama-3.1-70b-versatile",
                         temperature=0,
                         groq_api_key=st.secrets["groq_api_key"]  
                 )
-                self.file = file
+                
+        def load(self, file):
 
-        def load(self):
-
-                loader = PyPDFLoader(self.file)
+                loader = PyPDFLoader(file)
                 resume  = loader.load_and_split()
                 # print(res.content)
                 
