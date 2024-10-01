@@ -10,20 +10,20 @@ st.set_page_config(
         layout="wide"
     )
 
-with open("assets/style.css") as f:
-        st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+
 # Image to display
 img = Image.open('app/resources/photos/Email-Generator.jpg')
 com1, com2, com3 = st.columns([0.5,2,0.5], gap= 'small', vertical_alignment='center')
 with com1:
-    st.markdown("")  
+    pass
 with com2:
     # st.markdown("[link](%s):material/link:"% url)   
     st.image(img)
 with com3:
-    st.markdown("")
+    pass
 
-
+with open("assets/style.css") as f:
+        st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 # Title
 st.write("<span class = 'header email_app'>📧 Email Generator</span>", unsafe_allow_html=True)
