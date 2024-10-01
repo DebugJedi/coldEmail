@@ -20,7 +20,7 @@ with open("assets/style.css") as f:
         st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 # Title
-st.markdown(" # 📧 Email Generator</span>")
+st.markdown(" # 📧 Email Generator")
 
 # Document upload
 # st.markdown("******")
