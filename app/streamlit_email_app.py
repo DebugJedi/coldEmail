@@ -4,6 +4,11 @@ from PIL import Image
 import streamlit_shadcn_ui as ui
 from resume_extract import extract_resume
 
+st.set_page_config(
+        page_title= "Email Generator App",
+        page_icon= "📧",
+        layout="wide"
+    )
 
 with open("assets/style.css") as f:
         st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
