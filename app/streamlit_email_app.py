@@ -14,7 +14,7 @@ st.set_page_config(
 # Image to display
 img = Image.open('app/resources/photos/Email-Generator.jpg')
 
-st.image(img)
+st.image(img, width= 200)
 
 with open("assets/style.css") as f:
         st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
