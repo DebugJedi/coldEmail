@@ -15,7 +15,8 @@ st.image(img)
 st.write("<span class = 'header email_app'>📧 Email Generator</span>", unsafe_allow_html=True)
 
 # Document upload
-doc_file = st.file_uploader("Upload your resume/document",
+st.markdown("***Resume/CV (PDF)***")
+doc_file = st.file_uploader("",
                             type=["pdf"])
 
 jobPosting = st.text_input("Enter a job URL:", value = "https://boards.greenhouse.io/benchling/jobs/6270990" )
