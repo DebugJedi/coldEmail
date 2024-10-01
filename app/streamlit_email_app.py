@@ -13,7 +13,7 @@ st.set_page_config(
 
 # Image to display
 img = Image.open('app/resources/photos/Email-Generator.jpg')
-com1, com2, com3 = st.columns([0.5,2,0.5], gap= 'small', vertical_alignment='center')
+com1, com2, com3 = st.columns([1,2,1], gap= 'small', vertical_alignment='center')
 with com1:
     pass
 with com2:
