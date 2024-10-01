@@ -10,22 +10,22 @@ st.set_page_config(
         layout="wide"
     )
 
-# col1, col2, col3 = st.columns([1,2,1], gap= 'small', vertical_alignment='center')
+col1, col2, col3 = st.columns([1,2,1], gap= 'small', vertical_alignment='center')
 
 # Image to display
 img = Image.open('app/resources/photos/Email-Generator.jpg')
-st.image(img, width= 500)
-# with col1:
-#      pass
-# with col2:
-#     st.image(img, width= 500)
-# with col3:
-#      pass
+# st.image(img, width= 500)
+with col1:
+     pass
+with col2:
+    st.image(img, width= 500)
+with col3:
+     pass
 with open("assets/style.css") as f:
         st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 # Title
-t1,t2,t3 = st.columns([2,2,2], gap= 'small', vertical_alignment='center')
+t1,t2,t3 = st.columns([1,2,1], gap= 'small', vertical_alignment='center')
 
 with t1:
      pass
