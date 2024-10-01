@@ -30,7 +30,7 @@ t1,t2,t3 = st.columns([2,2,2], gap= 'small', vertical_alignment='center')
 with t1:
      pass
 with t2:
-    st.markdown(" # 📧 Email Generator")
+    st.markdown(" ## 📧 Email Generator")
 with t3:
      pass
 # Document upload
